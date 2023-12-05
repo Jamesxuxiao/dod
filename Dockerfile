@@ -7,4 +7,6 @@ COPY run_action.py entrypoint.sh /action/
 
 RUN pip3 install requests pyyaml
 
+RUN chmod +x /action/entrypoint.sh
+
 ENTRYPOINT ["/action/entrypoint.sh"]
