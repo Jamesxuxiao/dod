@@ -1,0 +1,18 @@
+name: 'Definition of Done (DoD) checker'
+description: 'Ensure the Definition of Done for the project has been satisfied'
+inputs:
+  github_token:
+    description: 'The GitHub token'
+    required: true
+  dod_yaml:
+    description: 'The relative path to the YAML file with your DoD'
+    required: true
+  message_header:
+    description: 'The header of the message with the DoD checklist'
+    default: '### :ballot_box_with_check: Definition of Done checklist'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'check'  
+  color: 'green'
