@@ -9,6 +9,6 @@ COPY run_action.py /action/run_action.py
 
 COPY entrypoint.sh /action/entrypoint.sh
 
-RUN chmod +x /action/entrypoint.sh
+RUN chmod 775 /action/entrypoint.sh
 
 ENTRYPOINT ["/action/entrypoint.sh"]
